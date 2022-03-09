@@ -18,6 +18,22 @@ body{
     text-align: center;
 }
 
-#description{
+h1{
+    background: -webkit-linear-gradient( #EF233C, #EDF2F4, #8D99AE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 64px;
+    font-weight: 700;
+}
+
+p{
+    padding: 8px;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+#form{
+    margin: 16px;
+    padding: 8px;
 
 }
