@@ -37,3 +37,19 @@ p{
     padding: 8px;
 
 }
+
+#birth-date{
+    padding: 1px;
+}
+
+h3{
+    font-size: 40px;
+    font-weight: 600;
+    color: #8D99AE;
+}
+
+span{
+    background: -webkit-linear-gradient( #EF233C, #EDF2F4, #8D99AE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
