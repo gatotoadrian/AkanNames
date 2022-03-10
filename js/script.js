@@ -1,28 +1,39 @@
 "use strict";
 const generateButton = document.getElementById("birth-date");
-// const day = ("sun", "mon", "tue", "wed", "fri", "sat");
+const output = document.getElementById("output")
 const males = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
 const females = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 const days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thursday", "Friday", "Satruday"];
 
 generateButton.addEventListener("submit", (e) => {
     e.preventDefault();
-    console.log(createName());
+    createName();
 });
 
 const createName = () => {
     const dateOfBirth = document.querySelector("#date").value;
-    const genderChoice = document.querySelector("input[type='radio']:checked");
-
+   
     const birthDay = new Date(dateOfBirth)
+    if(dateOfBirth === null){
+        alert("input date!")
+    }
+    const genderChoice = document.querySelector("input[name='gender']:checked").value;
+    
+    if(genderChoice === "") {
+        alert("please pick a gender!")
+    }
     const day = birthDay.getDay();
     const akanName = (gender) => { 
-        if(gender.value === "male")
-            return(males[day]);
-        return(females[day]);
+
+        if(gender === "male")
+            // return(males[day]);
+            return output.innerText = males[day]
+        if(gender === "female")
+            return output.innerText = females[day]
     }
-    return akanName(genderChoice)
+    akanName(genderChoice);
 }
+
 // const submition = document.getElementById("button");
 
 // const submitionDate = document.querySelector(".output");
